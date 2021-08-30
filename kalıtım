@@ -1,0 +1,113 @@
+/* A sınıfının değişken ve metodu B ye
+
+ * kalıtımsal geçecektir.
+
+*/ Üst sınıf tanımlanıyor.
+
+class A {
+
+  int i, j;
+
+ 
+
+  void showij() {
+
+    System.out.println("i and j: " + i + " " + j);
+
+  }
+
+}
+
+ 
+
+ 
+
+// A ‘nın B alt-sınıfı tanımlanıyor.
+
+class B extends A {
+
+  int k;
+
+ 
+
+  void showk() {
+
+    System.out.println("k: " + k);
+
+  }
+
+  void sum() {
+
+    System.out.println("i+j+k: " + (i+j+k));
+
+  }
+
+}
+
+ 
+
+ 
+
+// Uygulama programı
+
+// A ve B sınıflarına ait nesneler yaratılıyor.
+
+// A ve B ile aynı pakette (aynı dizinde) bulunmalıdır.
+
+class BasitInheritance {
+
+  public static void main(String args[]) {
+
+    A ustOb = new A();      // A ‘ya ait nesne
+
+    B altOb = new B();      // B ’ye ait nesne
+
+ 
+
+    // Anlık değişkenlere atama yapılıyor.
+
+    ustOb.i = 15;
+
+    ustOb.j = 25;
+
+    System.out.println(" ustOb nesnesinin öğeleri: ");
+
+    ustOb.showij();   //ustOb ‘nin öğelerini yazar
+
+    System.out.println();
+
+ 
+
+    /* Alt-sınıf üst-sınıfın bütün
+
+     * öğelerine erişebilir.
+
+    */
+
+    altOb.i = 3;
+
+    altOb.j = 5;
+
+    altOb.k = 7;
+
+    System.out.println("altOb nesnesinin öğeleri: ");
+
+    altOb.showij();   //üst-sınıftaki değişkenleri yazar
+
+    altOb.showk();    //alt-sınıftaki değişkeni yazar
+
+    System.out.println();
+
+ 
+
+    System.out.println("üst ve alt sınıftaki değişkenler toplanıyor… ");
+
+   System.out.println("(i + j + k) = ");
+
+ 
+
+    altOb.sum();
+
+  }
+
+}
