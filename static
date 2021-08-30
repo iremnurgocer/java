@@ -1,0 +1,71 @@
+// static değişkenler, metotlar, and bloklar.
+
+class DeneStatic {
+
+  static int a = 5;
+
+  static int b;
+
+ 
+
+  static void deneme(int x) {
+
+    System.out.println("x = " + x);
+
+    System.out.println("a = " + a);
+
+    System.out.println("b = " + b);
+
+  }
+
+ 
+
+  static {
+
+    System.out.println("Static blok başlatıldı.");
+
+    b = a * 3;
+
+  }
+
+ 
+
+  public static void main(String args[]) {
+
+    deneme(37);
+
+  }
+
+}
+
+ 
+
+1. Aşağıdaki programı çözümleyiniz.
+
+ class StaticDemo {
+
+  static int a = 26;
+
+  static int b = 64;
+
+  static void yaz() {
+
+    System.out.println("a = " + a);
+
+  }
+
+}
+
+ 
+
+class StaticYaz {
+
+  public static void main(String args[]) {
+
+    StaticDemo.yaz();
+
+    System.out.println("b = " + StaticDemo.b);
+
+  }
+
+}
