@@ -1,0 +1,59 @@
+// Basit bir paket
+
+package paket01;
+
+ 
+
+class Denge {
+
+  String ad;
+
+  double denklik;
+
+ 
+
+  Denge(String n, double b) {
+
+    ad = n;
+
+    denklik  = b;
+
+  }
+
+ 
+
+  void show() {
+
+    if(denklik<0)
+
+      System.out.print("-->> ");
+
+    System.out.println(ad + ": YTL" + denklik);
+
+  }
+
+  
+
+ 
+
+class DengeHesapla {
+
+  public static void main(String args[]) {
+
+    Denge dizim[] = new Denge[3];
+
+ 
+
+    dizim[0] = new Denge("Ahmet Demir", 123.23);
+
+    dizim[1] = new Denge("Sami Yenice", 157.02);
+
+    dizim[2] = new Denge("Bahar Selvi", -12.33);
+
+ 
+
+    for(int i=0; i<3; i++) dizim[i].show();
+
+  }
+
+}
