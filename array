@@ -1,0 +1,10 @@
+package diziler;
+public class ForDöngüsü01 {
+public static void main(String[] args) {
+ int[] intSayı = new int[5];
+ for (int i = 0; i < intSayı.length; i++)
+ intSayı[i] = i * 10;
+ for (int i = 0; i < intSayı.length; i++)
+ System.out.printf("intSayı[%d] = %d %n", i, intSayı[i]);
+ }
+} 
