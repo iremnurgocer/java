@@ -1,0 +1,20 @@
+public class class_adı {
+
+            Class gövdesi
+
+}
+
+protected class class_adı {
+
+            Class gövdesi
+
+}
+
+package paket_adı {
+
+            Paket gövdesi  }
+class class_adı {
+
+    Class gövdesi
+
+}
