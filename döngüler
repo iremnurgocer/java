@@ -1,0 +1,50 @@
+-for-
+ 
+ class BreakContinue02 {
+public static void main(String[] args) {
+ for (int i = 0; i < 20; i++) {
+ if (i == 10)
+ break;
+ if (i % 2 == 0)
+ continue;
+ System.out.printf("\t %d ", i);
+ }
+ System.out.println();
+ }
+} 
+
+
+-while-
+class While02 {
+public static void main(String[] args) {
+ int n = 1;
+ int toplam = 0;
+ while (n <= 10) {
+ toplam = toplam + n;
+ System.out.printf(" 1 den %d 'e kadar TOPLAM = %d %n", n, toplam);
+ n++;
+ }
+ }
+ 
+ -switch case-
+ switch (istek) {
+ case 1:
+ System.out.println("Yeni adres eklemek mi istiyorsunuz?");
+ break;
+ case 2:
+ System.out.println("Bir adres silecek misiniz?");
+ break;
+ case 3:
+ System.out.println("Bir adres güncelleyecek misiniz?");
+ break;
+ case 4:
+ System.out.println("Bir adres mi göreceksiniz?");
+ break;
+ case 5:
+ System.out.println("Hoşça kal!");
+ break;
+ default:
+ System.out.printf("%d geçerli bir seçim değildir %n", istek);
+ break; 
+ 
+ 
