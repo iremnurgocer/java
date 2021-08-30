@@ -1,0 +1,75 @@
+  // RunTime Polymorphism (Dynamic Method Dispatch)
+
+class A {
+
+   void kimGeldi() {
+
+     System.out.println("Şimdi A ‘daki kimGeldi methodu çağrıldı.");
+
+  }
+
+}
+
+ 
+
+class B extends A {
+
+        // override kimGeldi()
+
+  void kimGeldi() {
+
+    System.out.println("Şimdi B ‘deki kimGeldi methodu çağrıldı. ");
+
+  }
+
+}
+
+ 
+
+class C extends A {
+
+        // override kimGeldi()
+
+  void kimGeldi() {
+
+    System.out.println("Şimdi C ‘deki kimGeldi methodu çağrıldı. ");
+
+  }
+
+}
+
+ 
+
+class Dispatch {
+
+  public static void main(String args[]) {
+
+    A a = new A();    // A tipinden nesne
+
+    B b = new B();    // B tipinden nesne
+
+    C c = new C();    // C tipinden nesne
+
+    A r;              // A tipinden bir referans (işaretçi, pointer)  
+
+ 
+
+    r = a;            // r  referansı A ‘nın bir nesnesini işaret ediyor
+
+    r.kimGeldi();     // A ' daki kimGeldi metodunu çağırıyor
+
+ 
+
+    r = b;            // r  referansı B ‘nin bir nesnesini işaret ediyor
+
+    r.kimGeldi();     // B ' deki kimGeldi metodunu çağırıyor
+
+ 
+
+    r = c;            // r  referansı C ‘nin bir nesnesini işaret ediyor
+
+    r.kimGeldi();     // C ' deki kimGeldi metodunu çağırıyor
+
+  }
+
+}
