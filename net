@@ -1,0 +1,26 @@
+// Serialization example.
+// Derived by Hadi from previous DateServer.java
+import java.util.Date;
+import java.net.*;
+import java.io.*;
+public class DateServer {
+  public static void main (String [] args) {
+    try {
+      DateServer world = new DateServer();
+    } catch (IOException e) {
+      System.out.println("IO exception " + e);
+    }
+  }
+  static final public int portNumber = 4291;
+  public DateServer () throws IOException {
+    ServerSocket server = new ServerSocket(portNumber);
+    while (true) {
+      System.out.println("Waiting for a client");
+      Socket sock = server.accept();
+      System.out.println("Got a client, send a message");
+      ObjectOutputStream out = new ObjectOutputStream(sock.getOutputStream());
+      
+      out.writeObject(new Date());
+    }
+  }
+}
