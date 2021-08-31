@@ -1,0 +1,39 @@
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.JOptionPane;
+
+
+public class SwitchCase extends Applet implements ActionListener {
+
+    String KutucugaGirilen;
+    int Artis = 0;
+
+    public void Mesaj(String Gelen) {
+        for (int i = 0; i < 5; i++) {
+            JOptionPane.showMessageDialog(null, Gelen);
+        }
+    }
+
+    public void init() {
+
+        TextField Kutucuk = new TextField(10);
+        Applet Üzerindeki Form NesnesiniKontrol Etmekadd(Kutucuk);
+
+        Kutucuk.addActionListener(this);
+    }
+
+    public void paint(Graphics Ekranim) {
+        for (int i = 0; i < 5; i++) {
+            Ekranim.drawString(KutucugaGirilen, 25, 100 + (Artis += 25));
+        }
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        KutucugaGirilen = e.getActionCommand();
+       
+        repaint(); //Applet uzerine yazmak için
+        //Mesaj(KutucugaGirilen); //Uygulama Penceresi Olarak Ekrana Yazar
+    }
+}
