@@ -1,0 +1,21 @@
+public class JavaGui {
+
+    public static void main(String[] args) {
+        Frame pencere = new Frame();
+        pencere.setTitle("Java AWT");
+        pencere.setSize(300, 200);
+
+        Label label = new Label("AWT");
+        label.setBounds(50, 50, 150, 20);
+        pencere.add(label);
+
+        Button button = new Button("Tıkla");
+        button.setBounds(50, 70, 60, 20);
+        pencere.add(button);
+
+        pencere.setLayout(null);
+        pencere.setLocationRelativeTo(null);
+        pencere.setVisible(true);
+    }
+
+}
