@@ -1,0 +1,28 @@
+package tasarimkodlama;
+ 
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+ 
+public class TasarimKodlama {
+ 
+    public static void main(String[] args) {
+ 
+        JFrame  f=new JFrame("TASARIM KODLAMA");
+ 
+        JButton b1=new JButton("ÜST(PAGE_START)");
+        JButton b2=new JButton("ALT(PAGE_END)");
+        JButton b3=new JButton("SAĞ(LINE_START)");
+        JButton b4=new JButton("SOL(LINE_END)");
+        JButton b5=new JButton("ORTA(CENTER)");
+ 
+        f.add(b1,BorderLayout.PAGE_START);
+        f.add(b2,BorderLayout.PAGE_END);
+        f.add(b3,BorderLayout.LINE_START);
+        f.add(b4,BorderLayout.LINE_END);
+        f.add(b5,BorderLayout.CENTER);
+ 
+        f.setSize(300,300);
+        f.setVisible(true);
+    }
+}
